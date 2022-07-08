@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!--react dom은 html코드를 만들어냄 -->
+  <script type="text/babel">
+    const root = document.getElementById("root");
+    const Title = () => (
+      <h3 id="title" onMouseEnter={() => console.log("mouseEnter")}>
+        Hello I'm a title
+      </h3>
+    );
+    const Button = () => (
+      <button
+        style={{ backgroundColor: "tomato" }}
+        onClick={() => console.log("in clicked")}
+      >
+        Click me
+      </button>
+    );
+    const Container = () => (
+      <div>
+        <Title /> <Button />
+      </div>
+    );
+    ReactDOM.render(<Container />, root);
+  </script>
+</html>
+
+<!--JSX 자바스크립트를 확장해 리액트 적용가능하게 하는 방법 Babel JSX를 
+브라우저가 이해할 수 있는 언어로 바꿔줌 
+()=> : arrow function!! 함수를 만들어서 return 해주는 거랑 같음
+!!!! 컴포넌트의 첫 글자는 반드시 대문자!!!
+소문자면 html 태그로 생각함 직접 만든 요소는 전부 대문자로 시작해야함!
+-->

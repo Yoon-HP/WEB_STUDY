@@ -1,0 +1,33 @@
+<!--State 이해하기!-->
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!--react dom은 html코드를 만들어냄 -->
+  <script type="text/babel">
+    const root = document.getElementById("root");
+    let Counter = 0;
+    function countUp() {
+      Counter = Counter + 1;
+      render();
+    }
+    function render() {
+      ReactDOM.render(<Container />, root);
+    }
+
+    const Container = () => (
+      <div>
+        <h3>ToTal click: {Counter}</h3>
+        <button onClick={countUp}>Click me</button>
+      </div>
+    );
+    render();
+  </script>
+</html>
+
+<!--리 렌더링을 해야 업데이트 된 것이 웹 사이트 상에 보임!
+UI에서 바뀐 부분만 업데이트 함 React는 변한 컴포넌트만 신경씀! 매우 효율적-->

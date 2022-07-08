@@ -1,0 +1,17 @@
+useEffect함수를 이용해 한번만 렌더링할 컴포넌트를 지정할 수 있음 ex) API 호출 등
+useEffect의 매개변수 중 [] 에 아무것도 없다면 한번만 호출된다고 보장가능
+
+Cleanup create와 destroy의 반복
+컴포넌트가 사라지거나 없어질때 무언가를 보여주고 싶다면...
+useEffect와 return을 이용해 구현
+
+useEffect(() => {
+  console.log("hi :)");
+  return () => console.log("bye :(");
+}, []);
+
+
+const food=[1,2,3,4]
+[6, ...food]의 의미
+[6,1,2,3,4]
+...
