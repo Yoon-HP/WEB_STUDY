@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/WEB_STUDY.git/precache-manifest.d56f3bb67518692aa19cc00e301c922c.js"
+  "/WEB_STUDY/�븶���ڵ�/ReactJS��%20��ȭ%20��%20����%20�����/react-for-beginners/precache-manifest.ce6b72866cfbbb1ad048dcb88f0b0580.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/WEB_STUDY.git/index.html", {
+workbox.routing.registerNavigationRoute("/WEB_STUDY/�븶���ڵ�/ReactJS��%20��ȭ%20��%20����%20�����/react-for-beginners/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
